@@ -1,22 +1,23 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  arules
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
 Version:          1.0_7
-Release:          1
+Release:          2
 Summary:          Mining Association Rules and Frequent Itemsets
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.0-7.tar.gz
-Requires:         R-stats R-methods R-Matrix 
+Requires:         R-stats R-methods R-Matrix
 %if %{without bootstrap}
-Requires:         R-pmml R-arulesViz 
+Requires:         R-pmml R-arulesViz
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats R-methods R-Matrix
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
+BuildRequires:    R-methods R-Matrix
 %if %{without bootstrap}
-BuildRequires:    R-pmml R-arulesViz 
+BuildRequires:    R-pmml R-arulesViz
 %endif
 
 %description
