@@ -1,4 +1,4 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 %global packname  arules
 %global rlibdir  %{_libdir}/R/library
 
@@ -10,15 +10,24 @@ Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_1.0-7.tar.gz
-Requires:         R-stats R-methods R-Matrix
+Requires:         R-stats
+Requires:         R-methods
+Requires:         R-Matrix
 %if %{without bootstrap}
-Requires:         R-pmml R-arulesViz
+Requires:         R-pmml
+Requires:         R-arulesViz
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-stats
-BuildRequires:    R-methods R-Matrix
+BuildRequires:    R-devel
+BuildRequires:    Rmath-devel
+BuildRequires:    texlive-collection-latex
+BuildRequires:    R-stats
+BuildRequires:    R-methods
+BuildRequires:    R-Matrix
 %if %{without bootstrap}
-BuildRequires:    R-pmml R-arulesViz
+BuildRequires:    R-pmml
+BuildRequires:    R-arulesViz
 %endif
+BuildRequires:    pkgconfig(lapack)
 
 %description
 Provides the infrastructure for representing, manipulating and analyzing
@@ -56,3 +65,15 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
+
+
+%changelog
+* Wed Feb 22 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0_7-2
++ Revision: 778844
+- Rebuild with proper dependencies
+
+* Mon Feb 20 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0_7-1
++ Revision: 777884
+- Import R-arules
+- Import R-arules
+
