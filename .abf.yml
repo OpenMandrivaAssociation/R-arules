@@ -1,2 +1,4 @@
+removed_sources:
+  arules_1.0-7.tar.gz: 03533b0104507812c3bf64d002fd72bd6179b218
 sources:
-  "arules_1.0-7.tar.gz": 03533b0104507812c3bf64d002fd72bd6179b218
+  arules_1.0-12.tar.gz: 123dd3c3ea05c4262f0ede10992ad4a836536e2a
