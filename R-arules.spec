@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          1.0.12
-Release:          1
+Release:          2
 Summary:          Mining Association Rules and Frequent Itemsets
 Group:            Sciences/Mathematics
 License:          GPL-2
