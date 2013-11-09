@@ -59,7 +59,7 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %doc %{rlibdir}/%{packname}/DESCRIPTION
 %doc %{rlibdir}/%{packname}/NEWS
 %{rlibdir}/%{packname}/INDEX
-%{rlibdir}/%{packname}/LICENSE
+# %{rlibdir}/%{packname}/LICENSE
 %{rlibdir}/%{packname}/NAMESPACE
 %{rlibdir}/%{packname}/Meta
 %{rlibdir}/%{packname}/R
