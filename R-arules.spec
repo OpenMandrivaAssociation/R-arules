@@ -3,13 +3,13 @@
 %global rlibdir  %{_libdir}/R/library
 
 Name:             R-%{packname}
-Version:          1.1.2
+Version:          1.1.3
 Release:          1
 Summary:          Mining Association Rules and Frequent Itemsets
 Group:            Sciences/Mathematics
 License:          GPL-2
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/arules_1.1-2.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/arules_1.1-3.tar.gz
 Requires:         R-stats
 Requires:         R-methods
 Requires:         R-Matrix
@@ -66,19 +66,3 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/libs
-
-
-%changelog
-* Wed Feb 22 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0_7-2
-+ Revision: 778844
-- Rebuild with proper dependencies
-
-* Mon Feb 20 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0_7-1
-+ Revision: 777884
-- Import R-arules
-- Import R-arules
-
-
-
-
-
